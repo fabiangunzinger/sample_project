@@ -1,0 +1,16 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Data appendix}{2}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1}Data description}{2}{subsection.A.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2}Sample selection}{2}{subsection.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Months with missing data}{2}{section*.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3}Data preprocessing}{2}{subsection.A.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.4}Variable definitions}{2}{subsection.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.5}Summary statistics}{2}{subsection.A.5}% 
