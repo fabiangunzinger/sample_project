@@ -1,35 +1,12 @@
 \documentclass{article}
 
 \usepackage{
-    % amssymb,
-    % amsfonts,
     amsmath,
-    % bbm,
     booktabs,
-    % calc,
     caption,
-    % lscape,
-    % epstopdf,
-    % enumerate,
-    % enumitem,
-    % endnotes,
     graphicx,
-    % latexsym,
-    % morefloats,
     setspace,
-    % fancyhdr,
-    % url,
-    % float,
-    % placeins
-    % subcaption,
-    % tabularx,
-    % threeparttable,
-    % dcolumn,
-    % tikz,
-    % xfrac,
-    % xcolor
 }
-
 \usepackage[margin=2.5cm]{geometry}
 \usepackage[utf8, ansinew]{inputenc}    % required for umlaute
 \usepackage[ngerman, english]{babel}    % required for umlaute
@@ -47,7 +24,6 @@
     citecolor=black,
     hyperfootnotes=false
 ]{hyperref}
-% \usepackage[figure,table]{hypcap}
 
 \usepackage[
 	backend=biber,
@@ -60,9 +36,10 @@
 	url=true
 ]{biblatex}
 
+% clean up the bibtex rather than editing it
 \renewcommand*{\multicitedelim}{,\space}
 \DeclareFieldFormat[techreport,report,unpublished]{title}{\mkbibquote{#1}}
-\AtEveryBibitem{% Clean up the bibtex rather than editing it
+\AtEveryBibitem{
     \clearfield{date}
     \clearfield{eprint}
     \clearfield{isbn}
@@ -76,11 +53,7 @@
     }
 }
 
-% Block quotes
-% \usepackage{etoolbox}
-% \AtBeginEnvironment{quote}{\singlespacing\small}
-
-% Command shortcuts
+% command shortcuts
 \newcommand{\citet}[1]{\textcite{#1}}
 \newcommand{\citep}[1]{\parencite{#1}}
 \newcommand{\citef}[1]{\footcite{#1}}
