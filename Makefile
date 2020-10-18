@@ -1,5 +1,3 @@
-# path to project directory
-
 SHELL := /bin/bash
 
 ROOTDIR := $(shell pwd)
@@ -13,6 +11,7 @@ REPLACE := no
 .PHONY: data
 data:
 	@cd $(CODEDIR); python3 -m src.data.make_data $(SAMPLE)
+
 
 # -----------------------------------------------------------------------------
 # create database for targets, features, outcomes, and predictions
@@ -30,37 +29,10 @@ db:
 
 
 # ------------------------------------------------------------------------------
-# Add targets to clean dataset
-.PHONY: targets
-targets:
-	@cd $(CODEDIR); python3 -m src.targets.add_targets $(SAMPLE)
-	@echo 'Targets added to $(SAMPLE) data.'
-
-
-# ------------------------------------------------------------------------------
-# Build features database
-.PHONY: features
-# .DELETE_ON_ERROR:
-
-features:
-	@cd $(CODEDIR); python3 -m src.features.make_features $(SAMPLE)
-	@echo 'Features created for $(SAMPLE) data.'
-
-
-# ------------------------------------------------------------------------------
-# Add outcomes to clean dataset
-.PHONY: outcomes
-outcomes:
-	@cd $(CODEDIR); python3 -m src.outcomes.make_outcomes $(SAMPLE)
-	@echo 'Outcomes added to $(SAMPLE) data.'
-
-
-# ------------------------------------------------------------------------------
 # Produce summary statistics table
 .PHONY: sumstats
 sumstats:
 	@cd $(CODEDIR); python3 -m src.data.sumstats $(SAMPLE)
-
 
 
 # -----------------------------------------------------------------------------

@@ -1,3 +1,3 @@
 # sample_project
 
-Partial version of PhD project to showcase codes snippets.
+Partial version of one of my PhD project to showcase codes snippets.
