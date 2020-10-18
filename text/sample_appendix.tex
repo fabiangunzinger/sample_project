@@ -1,4 +1,4 @@
-% !TEX root = main.tex
+% !TEX root = sample.tex
 
 \section{Data appendix}
 \label{sec:data_appendix}
@@ -11,11 +11,10 @@
 % =============================================================================
 \subsection{Sample selection}
 \label{sub:sample_selection}
-Table~\ref{tab:selection} documents the selection criteria we applied for this purpose and the reduction in our sample after each step.
 
 \begin{table}[h]
 \caption{'Sample selection'}\label{tab:selection}
-\input{../output/tables/sample_selection_XX7.tex}
+\input{\tabdir/sample_selection_XX7.tex}
 \end{table}
 
 
@@ -33,4 +32,9 @@ Table~\ref{tab:selection} documents the selection criteria we applied for this p
 \subsection{Summary statistics}
 \label{sub:summary_statistics}
 
-\input{../output/tables/sumstats.tex}
+\begin{figure}[h]\centering
+\caption{Distribution of users by age
+\label{fig:age_distr}}
+    \includegraphics[width=0.75\textwidth]{\figdir/sumstats_age_distr.png}
+    \note{UK population proportions are obtained from \citet{ons2019mid}}.
+\end{figure}

@@ -1,0 +1,114 @@
+\documentclass{article}
+
+\usepackage{
+    amsmath,
+    booktabs,
+    caption,
+    graphicx,
+    setspace,
+}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8, ansinew]{inputenc}    % required for umlaute
+\usepackage[ngerman, english]{babel}    % required for umlaute
+\usepackage[T1]{fontenc}                % required for umlaute
+\usepackage{csquotes}
+
+\usepackage[
+    colorlinks,
+    breaklinks,
+    bookmarks=false,
+    pdfstartview=Fit,  % for fitting entire page; FitW just fits width
+    pdfview=Fit,       % after traversing a hyperlink
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    hyperfootnotes=false
+]{hyperref}
+
+\usepackage[
+	backend=biber,
+    bibencoding=utf8,
+	style=authoryear,
+	maxcitenames=2,
+    maxbibnames=30,
+	isbn=false,
+	eprint=false,
+	url=true
+]{biblatex}
+
+% clean up the bibtex rather than editing it
+\renewcommand*{\multicitedelim}{,\space}
+\DeclareFieldFormat[techreport,report,unpublished]{title}{\mkbibquote{#1}}
+\AtEveryBibitem{
+    \clearfield{date}
+    \clearfield{eprint}
+    \clearfield{isbn}
+    \clearfield{issn}
+    \clearfield{month}
+    \clearfield{note}
+    \clearfield{language}
+    \ifentrytype{article}{
+        \clearfield{url}
+        \clearfield{doi}
+    }
+}
+
+% command shortcuts
+\newcommand{\citet}[1]{\textcite{#1}}
+\newcommand{\citep}[1]{\parencite{#1}}
+\newcommand{\citef}[1]{\footcite{#1}}
+\newcommand{\edit}[1]{{\noindent\color{red}{#1}}}
+\newcommand{\gap}{{\color{red}...\#...}}
+\newcommand{\note}[1]{\scriptsize\flushleft Note: #1}
+\newcommand{\paper}[1]{{\citet{#1}: \citetitle{#1}}}
+\newcommand{\source}[1]{\center\scriptsize Source: #1}
+\newcommand{\what}[1]{{\noindent\textit{\color{blue}{#1}}}}
+
+\newcommand{\figdir}{../output/figures}
+\newcommand{\tabdir}{../output/tables}
+
+\bibliography{/Users/fgu/setup/LaTeX/fabib}
+\onehalfspacing
+
+% -----------------------------------------------------------------------------
+
+\title{
+    \textbf{Title}
+}
+\author{
+    Fabian Gunzinger \\ Warwick Business School
+    \and
+    Neil Stewart \\ Warwick Business School
+}
+\date{\today}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+% \newpage
+
+% \input{introduction.tex}
+
+% \input{data-analysis.tex}
+
+% \input{results.tex}
+
+% \input{discussion.tex}
+
+% \printbibliography
+
+\newpage
+\appendix
+
+\input{sample_appendix.tex}
+
+% \input{models_of_time_discounting.tex}
+
+
+% -----------------------------------------------------------------------------
+
+
+\end{document}
