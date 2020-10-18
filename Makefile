@@ -5,15 +5,14 @@ SHELL := /bin/bash
 ROOTDIR := $(shell pwd)
 CODEDIR := code
 
-SAMPLE := XX7
+SAMPLE := X77
 REPLACE := no
-DEBUG := False
 
 # ------------------------------------------------------------------------------
 # Clean raw data and perform sample selection
 .PHONY: data
 data:
-	@cd $(CODEDIR); python3 -m src.data.make_data $(SAMPLE) $(DEBUG)
+	@cd $(CODEDIR); python3 -m src.data.make_data $(SAMPLE)
 
 # -----------------------------------------------------------------------------
 # create database for targets, features, outcomes, and predictions
